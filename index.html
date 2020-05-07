@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Slap game</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Slap game</title>
-</head>
-
-<body>
-  <header class="container-fluid"></header>
-  <main class="container">
-    <div class="row">
-      <div class="col-4">
-        <div class="health-bar"></div>
-        <div id="player">
+  <body>
+    <header class="container-fluid"></header>
+    <main class="container">
+      <div class="row">
+        <div class="col-4">
+          <div class="health-bar"></div>
+          <div id="player"></div>
+        </div>
+        <div class="col-4">
+          <button onclick="slap()">slap</button
+          ><button onclick="kick()">kick</button
+          ><button onclick="theCheeseburgerOfHealing()">
+            The cheeseburger of healing</button
+          ><button onclick="eatTaco()">Eat Taco</button>
+        </div>
+        <div class="col-4">
+          <div class="health-bar"></div>
+          <div id="enemy"></div>
         </div>
       </div>
-      <div class="col-4">
-        <button onclick="slap()">slap</button><button onclick="kick()">kick</button><button
-          onclick="theCheeseburgerOfHealing()">The cheeseburger of
-          healing</button><button onclick="eatTaco()">Eat Taco</button>
+    </main>
+
+    <footer class="container-fluid">
+      <div class="row">
+        <div class="col"></div>
       </div>
-      <div class="col-4">
-        <div class="health-bar"></div>
-        <div id="enemy"></div>
-      </div>
-    </div>
-  </main>
+    </footer>
 
-  <footer class="container-fluid">
-    <div class="row">
-      <div class="col"></div>
-    </div>
-  </footer>
-
-  <script src="main.js"></script>
-</body>
-
+    <script src="main.js"></script>
+  </body>
 </html>
