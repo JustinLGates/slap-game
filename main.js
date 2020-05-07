@@ -1,9 +1,19 @@
 let player = {
   name: "player",
+  canAttack: true,
   health: 100,
+  dammage: 5,
+  multiplier: 1,
   weapon: {},
   inv: [],
   img: "//placehold.it/150x250"
+}
+let taco = {
+  power: 2
+}
+
+let cheeseBurger = {
+  healAmt: 30
 }
 
 let enemy = {
@@ -31,20 +41,47 @@ function drawCharacters() {
   document.getElementById("enemy").innerHTML = template
 }
 
+function canAttack() {
+  if (player.canAttack) {
+    player.canAttack = false
+    return true
+  }
+  return false
+}
+
 function slap() {
-  dammage(10)
+  if (canAttack()) {
+    dammage(player.dammage)
+  }
+}
+function kick() {
+  if (canAttack()) {
+    Math.random() * 10 > 5 ? dammage(player.dammage * 2) : dammage(4)
+  }
 
 }
 
-function kick() {
-  Math.random() * 10 > 5 ? dammage(20) : dammage(4)
+function eatTaco() {
+  player.dammage = player.dammage * 2
+  setTimeout(() => {
+    player.dammage = player.dammage / 2
+  }, 5000);
+}
+
+function theCheesburgerOfHealing() {
+  player.health += 30;
 }
 
 function dammage(amount, character = enemy) {
   character.health -= amount
   console.log(character.name + character.health);
-
 }
+
+setInterval(() => {
+  player.inv.push(cheeseBurger)
+  player.inv.push(taco)
+
+}, 10000);
 
 drawCharacters()
 
