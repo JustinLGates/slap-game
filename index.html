@@ -18,20 +18,24 @@
     <main class="container">
       <div class="row">
         <div class="col-4">
-          <div class="health-bar"></div>
+          <div id="health-bar-player"></div>
           <div id="player"></div>
         </div>
         <div class="col-4">
-          <button onclick="slap()">slap</button
-          ><button onclick="kick()">kick</button
-          ><button onclick="theCheeseburgerOfHealing()">
-            The cheeseburger of healing</button
-          ><button onclick="eatTaco()">Eat Taco</button>
+          <button class="btn btn-success" onclick="slap()">slap</button
+          ><button class="btn btn-warning" onclick="kick()">kick</button
+          ><button class="btn btn-success" onclick="theCheeseburgerOfHealing()">cheeseburger</button
+          ><button class="btn btn-success" onclick="eatTaco()">Eat Taco</button>
         </div>
         <div class="col-4">
-          <div class="health-bar"></div>
+          <div id="health-bar-enemy"></div>
+         
           <div id="enemy"></div>
         </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12" id="taco power-up"></div>
       </div>
     </main>
 
